@@ -62,8 +62,8 @@ const generateGame = () => {
         'assets/images/jepang.jpg', 
         'assets/images/padi.jpg', 
         'assets/images/rantai.jpg',
-        'assets/images/anotherImage1.jpg', // Tambahkan gambar tambahan
-        'assets/images/anotherImage2.jpg'  // Tambahkan gambar tambahan
+        'assets/images/sarekatislam.jpg',
+        'assets/images/budiutomo.jpg'  
     ];
 
     const picks = pickRandom(images, totalCards / 2); 

@@ -62,18 +62,19 @@ const generateGame = () => {
         'assets/images/jepang.jpg', 
         'assets/images/padi.jpg', 
         'assets/images/rantai.jpg',
-        'assets/images/image9.jpg', 
-        'assets/images/image10.jpg',
-        'assets/images/image11.jpg',
-        'assets/images/image12.jpg',
-        'assets/images/image13.jpg',
-        'assets/images/image14.jpg',
-        'assets/images/image15.jpg',
-        'assets/images/image16.jpg',
-        'assets/images/image17.jpg',
-        'assets/images/image18.jpg',
-        'assets/images/image19.jpg',
-        'assets/images/image20.jpg'
+        'assets/images/sarekatislam.jpg',
+        'assets/images/budiutomo.jpg',
+        'assets/images/tamansiswa.jpg',
+        'assets/images/muhammadiyah.jpg',
+        'assets/images/pki.jpg',
+        'assets/images/kurangtau.jpg',
+        'assets/images/pewanas.jpg',
+        'assets/images/soekarno.jpg',
+        'assets/images/hadikusumo.jpg',
+        'assets/images/radjiman.jpg',
+        'assets/images/agussalim.jpg',
+        'assets/images/hatta.jpg'
+
     ];
 
     // Pilih 20 gambar untuk dijadikan pasangan
