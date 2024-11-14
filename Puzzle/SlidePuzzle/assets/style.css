@@ -11,6 +11,11 @@
     --darkcol:#263238;
 }
 
+img {
+    width: 120px;
+    height: 120px;
+}
+
 
 body{
     display:flex;
@@ -41,7 +46,6 @@ body{
     font-size:10vh;
     font-weight:bold;
     text-align:center;
-    padding-top:3%;
     cursor: pointer;
     user-select:none;
     transition:left 0.3s,top 0.3s;
