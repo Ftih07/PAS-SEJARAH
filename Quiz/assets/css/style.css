@@ -381,3 +381,14 @@ footer button.show{
     color: #fff;
     background: #007bff;
 }
+
+.exit-button {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    color: red;
+    font-size: 34px;
+    cursor: pointer;
+}

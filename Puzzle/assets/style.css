@@ -28,10 +28,9 @@ body {
   text-align: center;
   font-size: 40px;
   color: #fff;
-  margin-bottom: 50px;
 }
 .btn {
-    margin-top: 10%;
+  margin-top: 10%;
   width: 100%;
   height: 60px;
   background: #0c80ef;
@@ -45,6 +44,16 @@ body {
 }
 .btn:hover {
   background: #0a6bc5;
+}
+.exit-button {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  color: red;
+  font-size: 34px;
+  cursor: pointer;
 }
 
 @media (max-width: 468px) {

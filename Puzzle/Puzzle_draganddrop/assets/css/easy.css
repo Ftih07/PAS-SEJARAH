@@ -58,3 +58,13 @@ h2 {
 .btn:hover {
   background: #0a6bc5;
 }
+.exit-button {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  color: red;
+  font-size: 34px;
+  cursor: pointer;
+}
