@@ -104,10 +104,23 @@ difficulty_buttons.forEach((elem,idx)=>{
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const backgroundMusic = document.getElementById('background-music')
-    
-    // Mulai musik saat halaman dimuat
+    const backgroundMusic = document.getElementById('background-music');
+    const muteButton = document.getElementById('mute-button');
+    const muteIcon = muteButton.querySelector('i'); // Ambil elemen ikon di dalam tombol
+
+    // Memulai musik saat halaman dimuat
     backgroundMusic.play().catch(error => {
         console.log("User interaction is required to start the audio on some browsers.", error);
+    });
+
+    // Menangani tombol mute/unmute
+    muteButton.addEventListener('click', () => {
+        if (backgroundMusic.muted) {
+            backgroundMusic.muted = false; // Aktifkan suara
+            muteIcon.classList.replace('bx-volume-mute', 'bx-volume-full'); // Ubah ikon ke volume penuh
+        } else {
+            backgroundMusic.muted = true; // Matikan suara
+            muteIcon.classList.replace('bx-volume-full', 'bx-volume-mute'); // Ubah ikon ke mute
+        }
     });
 });
