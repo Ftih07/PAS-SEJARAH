@@ -53,7 +53,7 @@ body {
 /* SIDEBAR */
 
 .page {
-	display: none; /* Sembunyikan semua halaman secara default */
+	display: none;
 }
 
 .page ul{
@@ -61,11 +61,11 @@ body {
 }
 
 .page.active {
-	display: block; /* Tampilkan hanya halaman yang memiliki kelas 'active' */
+	display: block; 
 }
 
 #sidebar ul.side-menu li.active a {
-	color: #4CAF50; /* Warna untuk menu yang aktif */
+	color: #4CAF50;
 }
 
 #sidebar {
@@ -507,35 +507,6 @@ body {
 }
 
 
-#content main .table-data .todo {
-	flex-grow: 1;
-	flex-basis: 300px;
-}
-#content main .table-data .todo .todo-list {
-	width: 100%;
-}
-#content main .table-data .todo .todo-list li {
-	width: 100%;
-	margin-bottom: 16px;
-	background: var(--grey);
-	border-radius: 10px;
-	padding: 14px 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-#content main .table-data .todo .todo-list li .bx {
-	cursor: pointer;
-}
-#content main .table-data .todo .todo-list li.completed {
-	border-left: 10px solid var(--blue);
-}
-#content main .table-data .todo .todo-list li.not-completed {
-	border-left: 10px solid var(--orange);
-}
-#content main .table-data .todo .todo-list li:last-child {
-	margin-bottom: 0;
-}
 /* MAIN */
 /* CONTENT */
 
@@ -605,9 +576,6 @@ body {
 		min-width: 420px;
 	}
 	#content main .table-data .order table {
-		min-width: 420px;
-	}
-	#content main .table-data .todo .todo-list {
 		min-width: 420px;
 	}
 }

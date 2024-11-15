@@ -49,7 +49,7 @@ body {
 /* SIDEBAR */
 
 .page {
-  display: none; /* Sembunyikan semua halaman secara default */
+  display: none; 
 }
 
 .page ul {
@@ -57,11 +57,11 @@ body {
 }
 
 .page.active {
-  display: block; /* Tampilkan hanya halaman yang memiliki kelas 'active' */
+  display: block;
 }
 
 #sidebar ul.side-menu li.active a {
-  color: #4caf50; /* Warna untuk menu yang aktif */
+  color: #4caf50;
 }
 
 #sidebar {
@@ -609,7 +609,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between; /* Membuat tombol di bawah */
+  justify-content: space-between; 
   text-align: center;
 }
 
@@ -635,7 +635,7 @@ body {
   font-size: 1em;
   line-height: 1.5;
   color: #333;
-  margin-bottom: auto; /* Membuat paragraf tetap di tengah */
+  margin-bottom: auto; 
 }
 
 .read-more {

@@ -5,7 +5,7 @@ const selectors = {
     timer: document.querySelector('.timer'),
     start: document.querySelector('button'),
     win: document.querySelector('.win'),
-    music: document.getElementById('background-music') // Menambahkan selector untuk musik
+    music: document.getElementById('background-music')
 }
 
 const state = {
@@ -51,7 +51,6 @@ const generateGame = () => {
         throw new Error("The dimension of the board must be an even number.")
     }
 
-    // Ubah emoji menjadi URL gambar atau path gambar.
     const images = [
         'assets/images/banteng.jpg', 
         'assets/images/belanda.jpg', 
@@ -87,7 +86,6 @@ const startGame = () => {
     state.gameStarted = true
     selectors.start.classList.add('disabled')
     
-    // Mulai musik saat permainan dimulai
     selectors.music.play();
 
     state.loop = setInterval(() => {
@@ -121,7 +119,6 @@ const flipCard = card => {
     if (state.flippedCards === 2) {
         const flippedCards = document.querySelectorAll('.flipped:not(.matched)');
 
-        // Cek apakah dua kartu yang dibalik memiliki gambar yang sama berdasarkan src
         if (flippedCards[0].querySelector('img').src === flippedCards[1].querySelector('img').src) {
             flippedCards[0].classList.add('matched');
             flippedCards[1].classList.add('matched');
@@ -132,7 +129,6 @@ const flipCard = card => {
         }, 1000);
     }
     
-    // Cek jika semua kartu sudah dipasangkan
     if (!document.querySelectorAll('.card:not(.flipped)').length) {
         setTimeout(() => {
             selectors.boardContainer.classList.add('flipped');

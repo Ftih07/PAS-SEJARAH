@@ -11,9 +11,6 @@ allSideMenu.forEach(item=> {
 	})
 });
 
-
-
-
 // TOGGLE SIDEBAR
 const menuBar = document.querySelector('#content nav .bx.bx-menu');
 const sidebar = document.getElementById('sidebar');
@@ -21,12 +18,6 @@ const sidebar = document.getElementById('sidebar');
 menuBar.addEventListener('click', function () {
 	sidebar.classList.toggle('hide');
 })
-
-
-
-
-
-
 
 const searchButton = document.querySelector('#content nav form .form-input button');
 const searchButtonIcon = document.querySelector('#content nav form .form-input button .bx');
@@ -44,10 +35,6 @@ searchButton.addEventListener('click', function (e) {
 	}
 })
 
-
-
-
-
 if(window.innerWidth < 768) {
 	sidebar.classList.add('hide');
 } else if(window.innerWidth > 576) {
@@ -63,8 +50,6 @@ window.addEventListener('resize', function () {
 	}
 })
 
-
-
 const switchMode = document.getElementById('switch-mode');
 
 switchMode.addEventListener('change', function () {
@@ -75,34 +60,26 @@ switchMode.addEventListener('change', function () {
 	}
 })
 
-// Ambil semua item menu sidebar
 const menuLinks = document.querySelectorAll('#sidebar .side-menu.top li a');
 const pages = document.querySelectorAll('main .page');
 
-// Fungsi untuk mengubah halaman
 function changePage(pageId) {
-	// Sembunyikan semua halaman
 	pages.forEach(page => {
 		page.classList.remove('active');
 	});
-	// Tampilkan halaman yang sesuai dengan ID
 	const targetPage = document.getElementById(pageId);
 	if (targetPage) {
 		targetPage.classList.add('active');
 	}
 }
 
-// Tambahkan event listener ke setiap item menu
 menuLinks.forEach(link => {
 	link.addEventListener('click', (e) => {
-		e.preventDefault(); // Cegah link default
+		e.preventDefault();
 
-		// Hapus kelas 'active' dari semua menu item
 		menuLinks.forEach(link => link.parentElement.classList.remove('active'));
-		// Tambahkan kelas 'active' ke menu item yang diklik
 		link.parentElement.classList.add('active');
 
-		// Ganti halaman sesuai dengan menu yang diklik
 		const pageId = link.getAttribute('data-page');
 		changePage(pageId);
 	});

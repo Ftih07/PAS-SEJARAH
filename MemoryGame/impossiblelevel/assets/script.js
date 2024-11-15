@@ -5,7 +5,7 @@ const selectors = {
     timer: document.querySelector('.timer'),
     start: document.querySelector('button'),
     win: document.querySelector('.win'),
-    music: document.getElementById('background-music') // Menambahkan selector untuk musik
+    music: document.getElementById('background-music')
 }
 
 const state = {
@@ -45,15 +45,14 @@ const pickRandom = (array, items) => {
 }
 
 const generateGame = () => {
-    const columns = 10; // Jumlah kolom 8
-    const rows = 4;    // Jumlah baris 5
-    const totalCards = columns * rows; // Total kartu akan menjadi 8x5 = 40
+    const columns = 10; 
+    const rows = 4;   
+    const totalCards = columns * rows; 
 
     if (totalCards % 2 !== 0) {
         throw new Error("Total cards must be an even number.");
     }
 
-    // Array gambar untuk kartu memori (harus cukup untuk 20 pasang gambar)
     const images = [
         'assets/images/banteng.jpg', 
         'assets/images/belanda.jpg', 
@@ -78,9 +77,8 @@ const generateGame = () => {
 
     ];
 
-    // Pilih 20 gambar untuk dijadikan pasangan
     const picks = pickRandom(images, totalCards / 2); 
-    const items = shuffle([...picks, ...picks]); // Duplikasi dan acak pasangan kartu
+    const items = shuffle([...picks, ...picks]); 
 
     const cards = `
         <div class="board" style="grid-template-columns: repeat(${columns}, auto)">
@@ -99,13 +97,10 @@ const generateGame = () => {
     selectors.board.replaceWith(parser.querySelector('.board'));
 };
 
-
-
 const startGame = () => {
     state.gameStarted = true
     selectors.start.classList.add('disabled')
     
-    // Mulai musik saat permainan dimulai
     selectors.music.play();
 
     state.loop = setInterval(() => {
@@ -139,7 +134,6 @@ const flipCard = card => {
     if (state.flippedCards === 2) {
         const flippedCards = document.querySelectorAll('.flipped:not(.matched)');
 
-        // Cek apakah dua kartu yang dibalik memiliki gambar yang sama berdasarkan src
         if (flippedCards[0].querySelector('img').src === flippedCards[1].querySelector('img').src) {
             flippedCards[0].classList.add('matched');
             flippedCards[1].classList.add('matched');
@@ -150,7 +144,6 @@ const flipCard = card => {
         }, 1000);
     }
     
-    // Cek jika semua kartu sudah dipasangkan
     if (!document.querySelectorAll('.card:not(.flipped)').length) {
         setTimeout(() => {
             selectors.boardContainer.classList.add('flipped');
