@@ -107,3 +107,12 @@ function checkCompletion() {
     // Show completion notification
     alert("Selamat, puzzle terselesaikan!");
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const backgroundMusic = document.getElementById('background-music')
+    
+    // Mulai musik saat halaman dimuat
+    backgroundMusic.play().catch(error => {
+        console.log("User interaction is required to start the audio on some browsers.", error);
+    });
+});

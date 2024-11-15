@@ -4,7 +4,8 @@ const selectors = {
     moves: document.querySelector('.moves'),
     timer: document.querySelector('.timer'),
     start: document.querySelector('button'),
-    win: document.querySelector('.win')
+    win: document.querySelector('.win'),
+    music: document.getElementById('background-music') // Menambahkan selector untuk musik
 }
 
 const state = {
@@ -89,6 +90,9 @@ const generateGame = () => {
 const startGame = () => {
     state.gameStarted = true
     selectors.start.classList.add('disabled')
+    
+    // Mulai musik saat permainan dimulai
+    selectors.music.play();
 
     state.loop = setInterval(() => {
         state.totalTime++

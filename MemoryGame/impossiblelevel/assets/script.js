@@ -4,7 +4,8 @@ const selectors = {
     moves: document.querySelector('.moves'),
     timer: document.querySelector('.timer'),
     start: document.querySelector('button'),
-    win: document.querySelector('.win')
+    win: document.querySelector('.win'),
+    music: document.getElementById('background-music') // Menambahkan selector untuk musik
 }
 
 const state = {
@@ -44,8 +45,8 @@ const pickRandom = (array, items) => {
 }
 
 const generateGame = () => {
-    const columns = 8; // Jumlah kolom 8
-    const rows = 5;    // Jumlah baris 5
+    const columns = 10; // Jumlah kolom 8
+    const rows = 4;    // Jumlah baris 5
     const totalCards = columns * rows; // Total kartu akan menjadi 8x5 = 40
 
     if (totalCards % 2 !== 0) {
@@ -103,6 +104,9 @@ const generateGame = () => {
 const startGame = () => {
     state.gameStarted = true
     selectors.start.classList.add('disabled')
+    
+    // Mulai musik saat permainan dimulai
+    selectors.music.play();
 
     state.loop = setInterval(() => {
         state.totalTime++
